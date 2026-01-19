@@ -13,6 +13,20 @@ import {
   Settings2,
   SquareTerminal,
   Search,
+  Calendar,
+  Clock,
+  CheckCircle,
+  XCircle,
+  Archive,
+  Package,
+  TrendingUp,
+  Sparkles,
+  Sun,
+  Palette,
+  BarChart3,
+  DollarSign,
+  LineChart,
+  FileText,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -31,25 +45,25 @@ import { Input } from "@/components/ui/input"
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "Dummy User",
+    email: "dummy@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "Gotrips",
       logo: GalleryVerticalEnd,
-      plan: "Enterprise",
+      plan: "Travel analytics",
     },
     {
-      name: "Acme Corp.",
+      name: "Wanderlust Travel",
       logo: AudioWaveform,
-      plan: "Startup",
+      plan: "Premium",
     },
     {
-      name: "Evil Corp.",
+      name: "Global Tours",
       logo: Command,
-      plan: "Free",
+      plan: "Enterprise",
     },
   ],
   navMain: [
@@ -63,16 +77,97 @@ const data = {
       title: "Bookings",
       url: "#",
       icon: BookOpen,
+      items: [
+        {
+          title: "All Bookings",
+          url: "#",
+          icon: Calendar,
+        },
+        {
+          title: "Pending",
+          url: "#",
+          icon: Clock,
+        },
+        {
+          title: "Confirmed",
+          url: "#",
+          icon: CheckCircle,
+        },
+        {
+          title: "Cancelled",
+          url: "#",
+          icon: XCircle,
+        },
+        {
+          title: "Completed",
+          url: "#",
+          icon: Archive,
+        },
+      ],
     },
     {
       title: "Packages",
       url: "#",
       icon: Frame,
+      items: [
+        {
+          title: "All Packages",
+          url: "#",
+          icon: Package,
+        },
+        {
+          title: "Popular",
+          url: "#",
+          icon: TrendingUp,
+        },
+        {
+          title: "New Arrivals",
+          url: "#",
+          icon: Sparkles,
+        },
+        {
+          title: "Seasonal",
+          url: "#",
+          icon: Sun,
+        },
+        {
+          title: "Custom",
+          url: "#",
+          icon: Palette,
+        },
+      ],
     },
     {
       title: "Revenue",
       url: "#",
       icon: PieChart,
+      items: [
+        {
+          title: "Overview",
+          url: "#",
+          icon: BarChart3,
+        },
+        {
+          title: "Highest Sale",
+          url: "#",
+          icon: TrendingUp,
+        },
+        {
+          title: "Current Sale",
+          url: "#",
+          icon: DollarSign,
+        },
+        {
+          title: "Monthly Report",
+          url: "#",
+          icon: LineChart,
+        },
+        {
+          title: "Yearly Report",
+          url: "#",
+          icon: FileText,
+        },
+      ],
     },
     {
       title: "Analytics",
@@ -103,15 +198,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader className="border-b border-sidebar-border pb-3">
-        <div className="flex items-center gap-2 px-4 py-2">
-          <div className="flex size-8 items-center justify-center rounded-lg bg-primary">
-            <GalleryVerticalEnd className="size-4 text-primary-foreground" />
-          </div>
-          <div className="flex flex-col group-data-[collapsible=icon]:hidden">
-            <span className="text-base font-semibold text-sidebar-foreground">Gotrips</span>
-            <span className="text-xs text-muted-foreground">Travel analytics</span>
-          </div>
-        </div>
+        <TeamSwitcher teams={data.teams} />
         <div className="px-4 pt-2 group-data-[collapsible=icon]:hidden">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
