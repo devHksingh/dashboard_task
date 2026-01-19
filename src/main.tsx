@@ -28,10 +28,8 @@ const queryClient = new QueryClient({
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    // Provide the client to your App
     <QueryClientProvider client={queryClient}>
       <App />
     </QueryClientProvider>
-    
   </StrictMode>,
 )
