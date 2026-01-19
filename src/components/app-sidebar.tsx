@@ -7,7 +7,7 @@ import {
   Bot,
   Command,
   Frame,
-  GalleryVerticalEnd,
+  // GalleryVerticalEnd,
   Map,
   PieChart,
   Settings2,
@@ -27,6 +27,7 @@ import {
   DollarSign,
   LineChart,
   FileText,
+  Plane,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -52,7 +53,7 @@ const data = {
   teams: [
     {
       name: "Gotrips",
-      logo: GalleryVerticalEnd,
+      logo: Plane,
       plan: "Travel analytics",
     },
     {
