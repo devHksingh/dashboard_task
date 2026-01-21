@@ -40,7 +40,7 @@ export default function Page() {
             <input
               type="search"
               placeholder="Search tours..."
-              className="flex-1 md:w-64 lg:w-80 px-3 py-2 text-sm border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50"
+              className="flex-1 md:w-64 lg:w-80 px-3 py-2 text-sm border border-border rounded-lg bg-background/10 focus:outline-none focus:ring-2 focus:ring-primary/50"
             />
             <button className="px-3 py-2 text-sm border border-border rounded-lg hover:bg-accent transition-colors whitespace-nowrap">
               Filters
@@ -52,68 +52,93 @@ export default function Page() {
         </header>
         
         <div className="flex flex-1 flex-col gap-4 md:gap-6 p-4 md:p-6 bg-background">
-          {/* Stats Cards - Responsive Grid */}
-          <div className="grid gap-3 md:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            <StatsCard
-              title="Total Bookings"
-              value="2,365"
-              subtitle="Last month: 2,050"
-              percentage="+15%"
-              icon={BookOpen}
-              trend="up"
-              variant="default"
-            />
-            <StatsCard
-              title="Total Packages"
-              value="150 Tours"
-              subtitle="Last month: 135"
-              percentage="+10%"
-              icon={Package}
-              trend="up"
-              variant="dark"
-            />
-            <StatsCard
-              title="Total Revenue"
-              value="$2.1M"
-              subtitle="Last month: $1.8M"
-              percentage="+20%"
-              icon={DollarSign}
-              trend="up"
-              variant="dark"
-            />
-            <StatsCard
-              title="Hot Destinations"
-              value="10"
-              subtitle="Last month: 7"
-              percentage="+42%"
-              icon={MapPin}
-              trend="up"
-              variant="dark"
-            />
-          </div>
+          
+          {/* Unified Bento Grid Layout - Including Stats Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-6">
+            
+            {/* Stats Cards - Integrated into Bento Grid (Top Row) */}
+            <div className="sm:col-span-1 lg:col-span-3">
+              <StatsCard
+                title="Total Bookings"
+                value="2,365"
+                subtitle="Last month: 2,050"
+                percentage="+15%"
+                icon={BookOpen}
+                trend="up"
+                variant="default"
+              />
+            </div>
+            
+            <div className="sm:col-span-1 lg:col-span-3">
+              <StatsCard
+                title="Total Packages"
+                value="150 Tours"
+                subtitle="Last month: 135"
+                percentage="+10%"
+                icon={Package}
+                trend="up"
+                variant="dark"
+              />
+            </div>
+            
+            <div className="sm:col-span-1 lg:col-span-3">
+              <StatsCard
+                title="Total Revenue"
+                value="$2.1M"
+                subtitle="Last month: $1.8M"
+                percentage="+20%"
+                icon={DollarSign}
+                trend="up"
+                variant="dark"
+              />
+            </div>
+            
+            <div className="sm:col-span-1 lg:col-span-3">
+              <StatsCard
+                title="Hot Destinations"
+                value="10"
+                subtitle="Last month: 7"
+                percentage="+42%"
+                icon={MapPin}
+                trend="up"
+                variant="dark"
+              />
+            </div>
 
-          {/* Earnings Chart and Bookings - Responsive Layout */}
-          <div className="grid gap-4 md:gap-6 grid-cols-1 lg:grid-cols-3">
-            <div className="lg:col-span-2">
+            {/* Main Earnings Chart - Large Focus Area */}
+            <div className="sm:col-span-2 lg:col-span-12 lg:row-span-2 min-h-[400px] lg:min-h-0">
               <EarningsChart />
             </div>
-            <div className="lg:col-span-2">
-              <ChartLineInteractive />
-            </div>
-            <div className="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1">
+
+            {/* Recent Bookings - Right Sidebar Top */}
+            <div className="sm:col-span-2 lg:col-span-8 lg:row-span-1">
               <BookingsTable />
+            </div>
+
+            {/* Top Destinations - Right Sidebar Middle */}
+            <div className="sm:col-span-1 lg:col-span-4 lg:row-span-1">
               <HotDestinations />
             </div>
-          </div>
 
-          {/* Packages and Customer Retention - Responsive Layout */}
-          <div className="grid gap-4 md:gap-6 grid-cols-1 lg:grid-cols-3">
-            <div className="lg:col-span-2">
-              <PackagesTable />
-            </div>
-            <div>
+            {/* Customer Retention - Right Sidebar Bottom */}
+            <div className="sm:col-span-1 lg:col-span-4 lg:row-span-1">
               <CustomerRetention />
             </div>
+
+            
+
+            
+
+            {/* Interactive Line Chart - Below Earnings Chart */}
+            <div className="sm:col-span-2 lg:col-span-8 lg:row-span-1 min-h-[350px] lg:min-h-0">
+              <ChartLineInteractive />
+            </div>
+
+            {/* Packages Table - Full Width Bottom */}
+            <div className="sm:col-span-2 lg:col-span-12">
+              <PackagesTable />
+            </div>
+
           </div>
         </div>
       </SidebarInset>
