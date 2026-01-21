@@ -1,4 +1,4 @@
-import { MapPin, ArrowUpRight } from "lucide-react"
+import { MapPin, ArrowUpRight, ChevronDown } from "lucide-react"
 
 interface Package {
   name: string
@@ -63,9 +63,9 @@ export function PackagesTable() {
           <button className="flex items-center gap-2 px-3 py-2 rounded-lg border border-border hover:bg-accent/30 transition-colors text-sm flex-1 sm:flex-initial">
             <MapPin className="size-4 text-muted-foreground" />
             <span className="text-sm text-foreground">United Kingdom</span>
-            {/* <ChevronDown className="size-4 text-muted-foreground" /> */}
+            <ChevronDown className="size-4 text-muted-foreground" />
           </button>
-          <button className="p-2 rounded-lg hover:bg-accent/50 transition-colors flex-shrink-0">
+          <button className="p-2 rounded-lg hover:bg-accent/50 transition-colors shrink-0">
             <ArrowUpRight className="size-4" />
           </button>
         </div>
