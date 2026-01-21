@@ -14,7 +14,7 @@ const bookings: Booking[] = [
   { name: "Samuel", tour: "Tokyo", amount: "$980", status: "Completed" },
   { name: "Daniel", tour: "Sydney", amount: "$1,300", status: "Confirmed" },
   { name: "Emily", tour: "New York", amount: "$1,300", status: "Confirmed" },
-  // { name: "Michael Wilson", tour: " Coastal", amount: "$2,300", status: "Confirmed" },
+  { name: "Michael", tour: "Coastal", amount: "$2,300", status: "Confirmed" },
   // { name: "Olivia Taylor", tour: " Coastal", amount: "$4,300", status: "Pending" },
   // { name: "James Anderson", tour: " Coastal", amount: "$6,300", status: "Confirmed" },
 ]

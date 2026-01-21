@@ -13,11 +13,12 @@ const destinations: Destination[] = [
   { name: "Bali", country: "Indonesia", icon: "🏝️", growth: "+18%", bookings: 298 },
   { name: "New York", country: "USA", icon: "🗽", growth: "+10%", bookings: 267 },
   { name: "Tokyo", country: "Japan", icon: "⛩️", growth: "+8%", bookings: 245 },
+  { name: "Beijing", country: "China", icon: "⛩️", growth: "+1%", bookings: 122 },
 ]
 
 export function HotDestinations() {
   return (
-    <div className="rounded-2xl border border-border bg-card p-4 md:p-6">
+    <div className="rounded-2xl border border-border bg-card p-4 md:p-6 lg:pb-4">
       <div className="flex items-center justify-between mb-3 md:mb-4">
         <h3 className="text-base md:text-lg font-semibold text-foreground">Top Destinations</h3>
         <button className="p-2 rounded-lg hover:bg-accent/50 transition-colors">

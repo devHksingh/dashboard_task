@@ -19,7 +19,7 @@ export default function Page() {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        {/* Header - Mobile Optimized */}
+        
         <header className="flex h-auto min-h-16 shrink-0 flex-col gap-3 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 border-b border-border bg-card sticky top-0 z-10 px-4 py-3 md:flex-row md:items-center md:px-6">
           <div className="flex items-center gap-2 w-full md:w-auto">
             <SidebarTrigger className="-ml-1" />
@@ -50,13 +50,13 @@ export default function Page() {
             </button>
           </div>
         </header>
-        
+        {/* Dashboard Content with bento grid */}
         <div className="flex flex-1 flex-col gap-4 md:gap-6 p-4 md:p-6 bg-background">
           
-          {/* Unified Bento Grid Layout - Including Stats Cards */}
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-6">
             
-            {/* Stats Cards - Integrated into Bento Grid (Top Row) */}
+            
             <div className="sm:col-span-1 lg:col-span-3">
               <StatsCard
                 title="Total Bookings"
@@ -105,22 +105,22 @@ export default function Page() {
               />
             </div>
 
-            {/* Main Earnings Chart - Large Focus Area */}
+            
             <div className="sm:col-span-2 lg:col-span-12 lg:row-span-2 min-h-[400px] lg:min-h-0">
               <EarningsChart />
             </div>
 
-            {/* Recent Bookings - Right Sidebar Top */}
+            
             <div className="sm:col-span-2 lg:col-span-8 lg:row-span-1">
               <BookingsTable />
             </div>
 
-            {/* Top Destinations - Right Sidebar Middle */}
+            
             <div className="sm:col-span-1 lg:col-span-4 lg:row-span-1">
               <HotDestinations />
             </div>
 
-            {/* Customer Retention - Right Sidebar Bottom */}
+            
             <div className="sm:col-span-1 lg:col-span-4 lg:row-span-1">
               <CustomerRetention />
             </div>
