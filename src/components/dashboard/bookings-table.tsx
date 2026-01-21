@@ -36,10 +36,10 @@ export function BookingsTable() {
               <span className="font-medium text-sm text-foreground">{booking.name}</span>
               <span className={`text-xs px-2 py-1 rounded-full ${
                 booking.status === "Confirmed" 
-                  ? "bg-success/20 text-success-foreground"
+                  ? "bg-[#dff4e6]/60 text-[#1a7a3f]"
                   : booking.status === "Pending"
-                  ? "bg-warning/20 text-warning-foreground"
-                  : "bg-muted text-muted-foreground"
+                  ? "bg-[#fff0d6] text-[#7a2300]"
+                  : "bg-[#2a2a2a]/20 text-[#272521]"
               }`}>
                 {booking.status}
               </span>
@@ -74,10 +74,10 @@ export function BookingsTable() {
                 <td className="py-3">
                   <span className={`text-xs px-2 py-1 rounded-full ${
                     booking.status === "Confirmed" 
-                      ? "bg-success/20 text-success-foreground"
+                      ? "bg-[#dff4e6]/60 text-[#1a7a3f]"
                       : booking.status === "Pending"
-                      ? "bg-warning/20 text-warning-foreground"
-                      : "bg-muted text-muted-foreground"
+                      ? "bg-[#fff0d6] text-[#7a2300]"
+                      : "bg-[#2a2a2a]/20 text-[#272521]"
                   }`}>
                     {booking.status}
                   </span>
