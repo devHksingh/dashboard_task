@@ -116,19 +116,20 @@ const queryClient = new QueryClient({
 ## 📸 Screenshots
 
 ### Desktop View (≥ 1024px)
-![Desktop Dashboard](./screenshots/desktop-view.png)
+![Desktop Dashboard](./public/screenshots/desktop-view.png)
 *Full-featured dashboard with bento grid layout*
 
 ### Tablet View (768px - 1024px)
-![Tablet Dashboard](./screenshots/tablet-view.png)
+![Tablet Dashboard](./public/screenshots/tablet-view.png)
+![Tablet Dashboard](./public/screenshots/Screenshot_ipad_view_with_sidebar_menu.png)
 *Optimized 2-column layout for tablets*
 
 ### Mobile View (< 768px)
-![Mobile Dashboard](./screenshots/mobile-view.png)
+![Mobile Dashboard](./public/screenshots/mobile-view.png)
 *Streamlined single-column layout*
 
 ### Sidebar Navigation
-![Sidebar](./screenshots/sidebar.png)
+![Sidebar](./public/screenshots/Screenshot_mobile_menu.png)
 *Collapsible navigation with search functionality*
 
 ## 🚀 Installation
@@ -309,7 +310,7 @@ export const useCreateBooking = () => {
 
 ## 👤 Author
 
-**[Harshit Kumar Singh]**
+**Harshit Kumar Singh**
 
 
 ---
