@@ -30,7 +30,7 @@ const packages: Package[] = [
     price: "$1,250",
     bookings: 210,
     status: "Active",
-    image: "https://images.unsplash.com/photo-1552389096-384fc0348954?w=100&h=100&fit=crop",
+    image: "https://images.unsplash.com/photo-1720884413532-59289875c3e1?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Castles & Country",
@@ -50,7 +50,7 @@ const packages: Package[] = [
     price: "$890",
     bookings: 132,
     status: "Active",
-    image: "https://images.unsplash.com/photo-1586339277861-99c4024ccc4c?w=100&h=100&fit=crop",
+    image: "https://images.unsplash.com/photo-1611697522020-f44d4e818698?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ]
 

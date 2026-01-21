@@ -186,7 +186,7 @@ export function EarningsChart() {
         <div>
           <p className="text-xs text-muted-foreground mb-1">Total Revenue</p>
           <p className="text-xl md:text-2xl font-bold text-foreground">
-            ${(totalRevenue / 1000).toFixed(0)}K
+            ${(totalRevenue / 1000).toFixed(0)} K
           </p>
         </div>
         <div>
@@ -273,7 +273,7 @@ export function EarningsChart() {
                   }}
                   formatter={(value, name) => {
                     if (name === "revenue") {
-                      return [`$${value.toLocaleString()}`, "Revenue"]
+                      return [`$${value.toLocaleString()}`, " Revenue"]
                     }
                     return [value, " Bookings"]
                   }}

@@ -67,7 +67,7 @@ export function CustomerRetention() {
         </div>
 
         {/* Summary Card */}
-        <div className="mt-4 p-3 rounded-xl bg-primary/5 border border-primary/20">
+        {/* <div className="mt-4 p-3 rounded-xl bg-primary/5 border border-primary/20">
           <div className="flex items-center justify-between mb-1">
             <span className="text-xs font-medium text-foreground">Customer Lifetime Value</span>
             <span className="text-sm font-bold text-primary">$2,847</span>
@@ -75,7 +75,7 @@ export function CustomerRetention() {
           <p className="text-xs text-muted-foreground">
             Average across all customers
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   )
