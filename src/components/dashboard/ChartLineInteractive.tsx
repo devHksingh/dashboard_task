@@ -136,7 +136,7 @@ export function ChartLineInteractive() {
     <Card className="py-4 sm:py-0">
       <CardHeader className="flex flex-col items-stretch border-b p-0! sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 pb-3 sm:pb-0">
-          <CardTitle>Line Chart - Interactive</CardTitle>
+          <CardTitle>Offline vs Online Bookings Breakdown</CardTitle>
           <CardDescription>
             Showing total bookings from offline and online channels
           </CardDescription>
