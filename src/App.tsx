@@ -12,6 +12,7 @@ import { HotDestinations } from "@/components/dashboard/hot-destinations"
 import { PackagesTable } from "@/components/dashboard/packages-table"
 import { CustomerRetention } from "@/components/dashboard/customer-retention"
 import { BookOpen, Package, DollarSign, MapPin } from "lucide-react"
+import { ChartLineInteractive } from "./components/dashboard/ChartLineInteractive"
 
 export default function Page() {
   return (
@@ -95,6 +96,9 @@ export default function Page() {
           <div className="grid gap-4 md:gap-6 grid-cols-1 lg:grid-cols-3">
             <div className="lg:col-span-2">
               <EarningsChart />
+            </div>
+            <div className="lg:col-span-2">
+              <ChartLineInteractive />
             </div>
             <div className="grid gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1">
               <BookingsTable />
